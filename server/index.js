@@ -44,6 +44,19 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api', require('./src/routes'));
 
+// 루트 경로 핸들러
+app.get('/', (req, res) => {
+  res.status(200).json({ 
+    success: true,
+    message: 'Shopping Mall API Server',
+    version: '1.0.0',
+    endpoints: {
+      api: '/api',
+      health: '/health'
+    }
+  });
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK', message: 'Server is running' });
