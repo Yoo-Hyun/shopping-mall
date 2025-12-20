@@ -8,7 +8,7 @@ import PromoBanner from '../components/home/PromoBanner';
 import OriginalSection from '../components/home/OriginalSection';
 import './HomePage.css';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 function HomePage() {
   const [user, setUser] = useState(null);

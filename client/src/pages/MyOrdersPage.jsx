@@ -4,7 +4,7 @@ import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import './MyOrdersPage.css';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 // 주문 상태 한글 변환
 const getStatusText = (status) => {
