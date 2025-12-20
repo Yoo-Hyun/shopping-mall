@@ -1,0 +1,90 @@
+/* ===== 섹션 공통 ===== */
+.section {
+  margin-bottom: 60px;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section-header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #999;
+}
+
+.section-link {
+  font-size: 14px;
+  color: #999;
+  text-decoration: none;
+}
+
+.section-link:hover {
+  color: #5f0080;
+}
+
+/* 상품 그리드 */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.rank-grid {
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.view-all-btn {
+  display: block;
+  margin: 24px auto 0;
+  padding: 12px 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.view-all-btn:hover {
+  border-color: #5f0080;
+  color: #5f0080;
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+  }
+
+  .rank-grid {
+    grid-template-columns: repeat(4, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+
+  .rank-grid {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+}
+

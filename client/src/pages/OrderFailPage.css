@@ -1,0 +1,248 @@
+/* ===== 전체 레이아웃 ===== */
+.order-fail-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fef2f2 0%, #f7f7f7 100%);
+}
+
+/* ===== 메인 콘텐츠 ===== */
+.order-fail-main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+}
+
+.fail-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.08);
+}
+
+/* ===== 실패 아이콘 ===== */
+.fail-icon {
+  margin-bottom: 32px;
+  animation: shake 0.5s ease-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}
+
+/* ===== 타이틀 ===== */
+.fail-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.fail-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 32px 0;
+}
+
+/* ===== 에러 정보 카드 ===== */
+.error-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.error-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.error-content {
+  flex: 1;
+}
+
+.error-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #dc2626;
+  margin: 0 0 8px 0;
+}
+
+.error-message {
+  font-size: 14px;
+  color: #7f1d1d;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.error-code {
+  font-size: 12px;
+  color: #991b1b;
+  margin: 0;
+  font-family: 'SF Mono', 'Menlo', monospace;
+}
+
+/* ===== 도움말 박스 ===== */
+.help-box {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.help-box h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.help-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.help-box li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.help-box li:last-child {
+  margin-bottom: 0;
+}
+
+.help-box li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ef4444;
+}
+
+/* ===== 고객센터 안내 ===== */
+.support-box {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
+.support-text {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 12px 0;
+}
+
+.support-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 4px 0;
+}
+
+.support-hours {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ===== 액션 버튼 ===== */
+.order-fail-container .action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.order-fail-container .secondary-btn,
+.order-fail-container .primary-btn {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.order-fail-container .secondary-btn {
+  background: #fff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.order-fail-container .secondary-btn:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.order-fail-container .primary-btn {
+  background: #ef4444;
+  border: none;
+  color: #fff;
+}
+
+.order-fail-container .primary-btn:hover {
+  background: #dc2626;
+}
+
+/* ===== 반응형: 모바일 ===== */
+@media (max-width: 640px) {
+  .order-fail-main {
+    padding: 40px 16px 80px;
+  }
+
+  .fail-card {
+    padding: 40px 24px;
+    border-radius: 16px;
+  }
+
+  .fail-icon svg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .fail-title {
+    font-size: 24px;
+  }
+
+  .fail-subtitle {
+    font-size: 14px;
+  }
+
+  .error-info-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .help-box {
+    padding: 20px;
+  }
+
+  .support-box {
+    padding: 16px;
+  }
+
+  .order-fail-container .action-buttons {
+    flex-direction: column;
+  }
+
+  .order-fail-container .secondary-btn,
+  .order-fail-container .primary-btn {
+    padding: 14px 20px;
+  }
+}
+

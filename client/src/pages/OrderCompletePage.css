@@ -1,0 +1,223 @@
+/* ===== 전체 레이아웃 ===== */
+.order-complete-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #faf5ff 0%, #f7f7f7 100%);
+}
+
+/* ===== 메인 콘텐츠 ===== */
+.order-complete-main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+}
+
+.complete-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(95, 0, 128, 0.08);
+}
+
+/* ===== 완료 아이콘 ===== */
+.complete-icon {
+  margin-bottom: 32px;
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== 타이틀 ===== */
+.complete-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.complete-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 40px 0;
+}
+
+/* ===== 주문 정보 카드 ===== */
+.order-info-card {
+  background: #faf5ff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.order-info-card .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.order-info-card .info-row:first-child {
+  padding-top: 0;
+  border-bottom: 1px solid #ebe0f0;
+}
+
+.order-info-card .info-row:last-child {
+  padding-bottom: 0;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.info-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.info-value.order-number {
+  font-family: 'SF Mono', 'Menlo', monospace;
+  color: #5f0080;
+  letter-spacing: 0.5px;
+}
+
+.info-value.total-amount {
+  font-size: 18px;
+  color: #5f0080;
+}
+
+/* ===== 안내 박스 ===== */
+.notice-box {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.notice-box h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.notice-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notice-box li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.notice-box li:last-child {
+  margin-bottom: 0;
+}
+
+.notice-box li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #5f0080;
+}
+
+/* ===== 액션 버튼 ===== */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.secondary-btn,
+.primary-btn {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-btn {
+  background: #fff;
+  border: 1px solid #5f0080;
+  color: #5f0080;
+}
+
+.secondary-btn:hover {
+  background: #faf5ff;
+}
+
+.primary-btn {
+  background: #5f0080;
+  border: none;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: #4a0066;
+}
+
+/* ===== 반응형: 모바일 ===== */
+@media (max-width: 640px) {
+  .order-complete-main {
+    padding: 40px 16px 80px;
+  }
+
+  .complete-card {
+    padding: 40px 24px;
+    border-radius: 16px;
+  }
+
+  .complete-icon svg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .complete-title {
+    font-size: 24px;
+  }
+
+  .complete-subtitle {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .order-info-card {
+    padding: 20px;
+  }
+
+  .notice-box {
+    padding: 20px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .secondary-btn,
+  .primary-btn {
+    padding: 14px 20px;
+  }
+}
+

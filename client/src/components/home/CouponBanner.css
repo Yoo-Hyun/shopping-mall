@@ -1,0 +1,39 @@
+/* ===== 쿠폰 배너 ===== */
+.coupon-banner {
+  background: linear-gradient(90deg, #f4eaff 0%, #ffe6f2 100%);
+  padding: 16px 0;
+}
+
+.coupon-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.coupon-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #5f0080;
+}
+
+.coupon-subtext {
+  font-size: 13px;
+  color: #999;
+  cursor: pointer;
+}
+
+.coupon-subtext:hover {
+  color: #5f0080;
+}
+
+/* 반응형 */
+@media (max-width: 1100px) {
+  .coupon-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+

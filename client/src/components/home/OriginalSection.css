@@ -1,0 +1,75 @@
+/* ===== 오리지널 섹션 ===== */
+.original-section {
+  margin-bottom: 80px;
+}
+
+.original-section .section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.original-section .section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.original-section .section-subtitle {
+  font-size: 14px;
+  color: #999;
+}
+
+.original-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.original-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.original-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.original-card:hover img {
+  transform: scale(1.05);
+}
+
+.original-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: #fff;
+}
+
+.original-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.original-info p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .original-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

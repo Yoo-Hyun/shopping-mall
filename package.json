@@ -1,0 +1,12 @@
+{
+  "name": "shopping-mall-monorepo",
+  "version": "1.0.0",
+  "description": "Shopping Mall - Monorepo (Client + Server)",
+  "scripts": {
+    "start": "npm start --prefix server",
+    "heroku-postbuild": "npm install --prefix server"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

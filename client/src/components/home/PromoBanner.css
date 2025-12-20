@@ -1,0 +1,150 @@
+/* ===== 프로모션 배너 ===== */
+.promo-banner {
+  background: linear-gradient(135deg, #fef0f5 0%, #fce4ec 100%);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+.cake-banner {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #ffecb3 100%);
+}
+
+.promo-content {
+  text-align: center;
+}
+
+.promo-title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.promo-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.promo-icon {
+  font-size: 32px;
+}
+
+.promo-keyword {
+  color: #5f0080;
+}
+
+.promo-subtext {
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* ===== 페스타 배너 ===== */
+.festa-banner {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+.festa-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.festa-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #5f0080;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.festa-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.festa-subtext {
+  font-size: 14px;
+  color: #666;
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+.festa-product {
+  display: flex;
+  gap: 24px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.festa-product img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.festa-product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.festa-product-date {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.festa-product-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #5f0080;
+  margin-bottom: 4px;
+}
+
+.festa-product-period {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.festa-more-btn {
+  padding: 8px 16px;
+  background: #5f0080;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: fit-content;
+}
+
+.festa-more-btn:hover {
+  background: #4a0066;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .festa-content {
+    flex-direction: column;
+  }
+}
+

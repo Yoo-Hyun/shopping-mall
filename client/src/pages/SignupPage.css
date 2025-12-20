@@ -1,0 +1,253 @@
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  border-radius: 16px;
+  padding: 48px 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.signup-title {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.signup-subtitle {
+  font-size: 0.95rem;
+  color: #888;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 1rem;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 14px 14px 44px;
+  font-size: 0.95rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #1a1a2e;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.08);
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.toggle-password:hover {
+  opacity: 0.8;
+}
+
+.input-hint {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 4px;
+}
+
+/* 약관 동의 섹션 */
+.agreements-section {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 8px;
+}
+
+.agreement-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.agreement-item input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.agreement-item input[type="checkbox"]:checked ~ .checkmark {
+  background: #1a1a2e;
+  border-color: #1a1a2e;
+}
+
+.agreement-item input[type="checkbox"]:checked ~ .checkmark::after {
+  content: '✓';
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.agreement-text {
+  font-size: 0.9rem;
+  color: #444;
+  flex: 1;
+}
+
+.agreement-all {
+  padding-bottom: 16px;
+}
+
+.agreement-all .agreement-text {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.agreement-divider {
+  height: 1px;
+  background: #e5e5e5;
+  margin-bottom: 8px;
+}
+
+.view-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.view-btn:hover {
+  color: #1a1a2e;
+}
+
+/* 회원가입 버튼 */
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #1a1a2e;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 12px;
+}
+
+.submit-btn:hover {
+  background: #2d2d44;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 26, 46, 0.25);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* 로그인 링크 */
+.login-link {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 24px;
+}
+
+.login-link a {
+  color: #1a1a2e;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 */
+@media (max-width: 520px) {
+  .signup-card {
+    padding: 32px 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+

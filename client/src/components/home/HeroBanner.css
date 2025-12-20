@@ -1,0 +1,124 @@
+/* ===== 히어로 배너 ===== */
+.hero-banner {
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.banner-content {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+  min-height: 400px;
+}
+
+.banner-text {
+  color: #fff;
+  max-width: 400px;
+}
+
+.banner-subtitle {
+  font-size: 18px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.banner-title {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.banner-subtext {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.banner-date {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 24px;
+}
+
+.banner-btn {
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.banner-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.banner-image {
+  width: 500px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-indicators {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, width 0.2s;
+}
+
+.indicator.active {
+  background: #fff;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* 반응형 */
+@media (max-width: 1100px) {
+  .banner-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .banner-image {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+

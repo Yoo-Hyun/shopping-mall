@@ -1,0 +1,89 @@
+/* ===== 푸터 ===== */
+.footer {
+  background: #f5f5f5;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.footer-phone {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.footer-time {
+  font-size: 13px;
+  color: #666;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #5f0080;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #999;
+}
+
+/* 반응형 */
+@media (max-width: 1100px) {
+  .footer-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}
+

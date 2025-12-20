@@ -1,0 +1,570 @@
+/* ===== 전체 레이아웃 ===== */
+.my-orders-container {
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+
+.loading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #666;
+  gap: 16px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e5e5;
+  border-top-color: #5f0080;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== 메인 콘텐츠 ===== */
+.my-orders-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+/* ===== 페이지 헤더 ===== */
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+/* ===== 주문 진행 현황 ===== */
+.order-progress-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.progress-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.progress-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  min-width: 80px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.progress-card:hover {
+  background: #f0e6f5;
+  transform: translateY(-2px);
+}
+
+.progress-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.progress-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress-count {
+  font-size: 20px;
+  font-weight: 700;
+  color: #5f0080;
+}
+
+.progress-label {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.progress-arrow {
+  font-size: 18px;
+  color: #ccc;
+  flex-shrink: 0;
+}
+
+/* ===== 탭 메뉴 ===== */
+.order-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 8px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.order-tabs .tab-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.order-tabs .tab-btn:hover {
+  background: #f8f4fa;
+  color: #5f0080;
+}
+
+.order-tabs .tab-btn.active {
+  background: linear-gradient(135deg, #5f0080 0%, #7b1fa2 100%);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(95, 0, 128, 0.3);
+}
+
+.order-tabs .tab-btn .tab-icon {
+  font-size: 16px;
+}
+
+.order-tabs .tab-btn .tab-text {
+  font-weight: 600;
+}
+
+.order-tabs .tab-btn .tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.order-tabs .tab-btn.active .tab-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* ===== 빈 주문 ===== */
+.empty-orders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 24px;
+  opacity: 0.5;
+}
+
+.empty-text {
+  font-size: 16px;
+  color: #999;
+  margin: 0 0 32px 0;
+}
+
+.shop-btn {
+  padding: 14px 40px;
+  background: #5f0080;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.shop-btn:hover {
+  background: #4a0066;
+}
+
+/* ===== 주문 목록 ===== */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== 주문 카드 ===== */
+.order-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* 주문 헤더 */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-date {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.order-number {
+  font-size: 13px;
+  color: #999;
+  font-family: 'SF Mono', 'Menlo', monospace;
+}
+
+.order-status {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 주문 상품 */
+.order-items {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-item {
+  display: flex;
+  gap: 16px;
+}
+
+.order-item .item-image {
+  width: 70px;
+  height: 90px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.order-item .item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-details .item-name {
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.item-details .item-name:hover {
+  text-decoration: underline;
+}
+
+.item-details .item-option {
+  font-size: 13px;
+  color: #999;
+  margin: 0;
+}
+
+/* 주문 푸터 (결제금액 + 액션) */
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
+  gap: 16px;
+}
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.total-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.total-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.tracking-number {
+  font-size: 13px;
+  color: #5f0080;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: 1px solid #ddd;
+}
+
+.action-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 110px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.action-btn:active {
+  transform: scale(0.97);
+}
+
+.action-btn.primary {
+  background: linear-gradient(135deg, #5f0080 0%, #7b1fa2 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(95, 0, 128, 0.3);
+}
+
+.action-btn.primary:hover {
+  background: linear-gradient(135deg, #4a0066 0%, #6a1b9a 100%);
+  box-shadow: 0 6px 16px rgba(95, 0, 128, 0.4);
+  transform: translateY(-1px);
+}
+
+.action-btn.secondary {
+  background: #fff;
+  border: 1.5px solid #5f0080;
+  color: #5f0080;
+}
+
+.action-btn.secondary:hover {
+  background: #5f0080;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(95, 0, 128, 0.25);
+}
+
+.action-btn.cancel {
+  background: #fff;
+  border: 1.5px solid #dc3545;
+  color: #dc3545;
+}
+
+.action-btn.cancel:hover {
+  background: #dc3545;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* ===== 반응형: 태블릿 ===== */
+@media (max-width: 768px) {
+  .my-orders-main {
+    padding: 24px 16px 60px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .order-progress-section {
+    padding: 16px;
+    overflow-x: auto;
+  }
+
+  .progress-cards {
+    min-width: max-content;
+    gap: 4px;
+  }
+
+  .progress-card {
+    padding: 12px 14px;
+    min-width: 65px;
+  }
+
+  .progress-icon {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .progress-count {
+    font-size: 16px;
+  }
+
+  .progress-label {
+    font-size: 10px;
+  }
+
+  .progress-arrow {
+    font-size: 14px;
+  }
+
+  .order-tabs {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .order-tabs .tab-btn {
+    padding: 10px 8px;
+    font-size: 12px;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .order-tabs .tab-btn .tab-icon {
+    font-size: 18px;
+  }
+
+  .order-tabs .tab-btn .tab-count {
+    min-width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px 20px;
+  }
+
+  .order-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .order-items {
+    padding: 16px 20px;
+  }
+
+  .order-item .item-image {
+    width: 60px;
+    height: 78px;
+  }
+
+  .order-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .footer-left {
+    flex-wrap: wrap;
+  }
+
+  .footer-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .action-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}
+
+/* ===== 반응형: 모바일 ===== */
+@media (max-width: 480px) {
+  .page-header {
+    margin-bottom: 24px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+
+  .empty-orders {
+    padding: 60px 20px;
+  }
+
+  .empty-icon {
+    font-size: 48px;
+  }
+
+  .order-header {
+    padding: 14px 16px;
+  }
+
+  .order-items {
+    padding: 14px 16px;
+  }
+
+  .order-footer {
+    padding: 14px 16px;
+  }
+
+  .total-amount {
+    font-size: 16px;
+  }
+}
+
